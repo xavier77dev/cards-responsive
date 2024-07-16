@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #d7d3d3;
+  --button-color: #fff;
+  --first-grid-color: #a25a11;
+  --second-grid-color: #016871;
+  --third-grid-color: #00403f;
+}
+
+body {
+  height: 100svh;
+  background: rgb(120, 85, 12);
+  background: linear-gradient(158deg,
+      rgb(120, 85, 12) 11%,
+      rgb(20, 70, 51) 100%);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.parent-grid {
+  display: flex;
+  width: 70%;
+}
+
+.first-grid,
+.second-grid,
+.third-grid {
+  height: 500px;
+}
+
+.first-grid {
+  background-color: var(--first-grid-color);
+  transition: background-color 0.5s ease;
+}
+
+.first-grid:hover {
+  background-color: #bd691a;
+}
+
+.second-grid {
+  background-color: var(--second-grid-color);
+  transition: background-color 0.5s ease;
+}
+
+.second-grid:hover {
+  background-color: #038c99;
+}
+
+.third-grid {
+  background-color: var(--third-grid-color);
+  transition: background-color 0.5s ease;
+}
+
+.third-grid:hover {
+  background-color: #0c6361;
+}
+
+h2,
+p {
+  color: var(--text-color);
+}
+
+h2 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  align-self: flex-start;
+}
+
+.para-text p {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-variation-settings: "wdth" 100;
+  letter-spacing: 0.14rem;
+  font-size: 0.9rem;
+}
+
+.detail {
+  padding: 20% 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.para-text,
+.learn-more {
+  margin-top: 20px;
+}
+
+.learn-more {
+  align-self: flex-start;
+  height: max-content;
+  width: max-content;
+  padding: 10px 10px;
+  border-radius: 40px;
+  background-color: var(--button-color);
+}
+
+.first-button,
+.second-button,
+.third-button {
+  transition: all 0.5s ease 0s;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.first-button:hover,
+.second-button:hover,
+.third-button:hover {
+  transform: scale(1.1);
+}
+
+.first-button>p {
+  color: var(--first-grid-color);
+  font-weight: 100;
+}
+
+.second-button>p {
+  color: var(--second-grid-color);
+  font-weight: 100;
+}
+
+.third-button>p {
+  color: var(--third-grid-color);
+  font-weight: 100;
+}
+
+.container-info {
+  min-height: 250px;
+}
+
+@media (max-width: 730px) {
+  .detail {
+    padding: 0 20px;
+  }
+
+  .first-grid,
+  .second-grid,
+  .third-grid {
+    height: 450px;
+  }
+}
+
+@media (max-width: 548px) {
+  .container-info {
+    height: 275px;
+  }
+
+  .detail {
+    justify-content: space-around;
+  }
+
+  .first-grid,
+  .second-grid,
+  .third-grid {
+    height: 390px;
+  }
+
+  .para-text p {
+    font-size: 12.5px;
+  }
+
+  .parent-grid {
+    width: 90%;
+  }
+}
+
+
+@media (max-width: 477px) {
+  .parent-grid {
+    width: 100%;
+  }
+
+  .detail {
+    padding: 1% 5%;
+  }
+}
